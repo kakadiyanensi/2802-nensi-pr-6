@@ -1,0 +1,60 @@
+<table border="10">
+    <tr>
+        <td>no</td>
+        <td>name</td>
+        <td>surname</td>
+        <td>phoneno</td>
+        <td>bod</td>
+    </tr>
+    <tbody id="frendes">
+    </tbody>
+</table>
+
+<script type="text/javascript">
+
+    let tbl = "";
+
+    class Emp{
+        constructor(no,name,surname,phoneno,bod){
+            this.no = no;
+            this.name = name;
+            this.surname = surname;
+            this.phoneno = phoneno;
+            this.bod = bod ;
+        }
+        getfrendes(){
+
+            tbl += `
+                        <tr>
+                            <td>${this.no}</td>
+                            <td>${this.name}</td>
+                            <td>${this.surname}</td>
+                            <td>${this.phoneno}</td>
+                            <td>${this.bod}</td>
+                        </tr>
+                    `
+
+            document.getElementById('frendes').innerHTML = tbl;
+        }
+    }
+
+    let ans = new Emp(1,"kanan","ramani",1234567890,"30-04-2002");
+    let ans1 = new Emp(2,"kanan","ramani",1234567890,"30-04-2002");
+    let ans2 = new Emp(3,"vidhi","kakadiya",1234567890,"30-04-2002");
+    let ans3 = new Emp(4,"isha","ramani",1234567890,"30-04-2002");
+    let ans4 = new Emp(5,"zeel","karad",1234567890,"30-04-2002");
+    let ans5 = new Emp(6,"dharmit","ghevariya",1234567890,"30-04-2002");
+    let ans6 = new Emp(7,"vaibhav","kathiriya",1234567890,"30-04-2002");
+
+    ans.getfrendes();
+    ans1.getfrendes();
+    ans2.getfrendes();
+    ans3.getfrendes();
+    ans4.getfrendes();
+    ans5.getfrendes();
+    ans6.getfrendes();
+    
+
+
+   
+</script>
